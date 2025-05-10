@@ -34,30 +34,36 @@ elif menu == "Kalkulator Kebisingan Umum":
 
     if noise_level <= SNI_LIMIT:
         st.success(f"{noise_level} dB ✅ MEMENUHI standar SNI lingkungan kerja (≤ {SNI_LIMIT} dB).")
+        st.info("**Keterangan:** Tingkat kebisingan dalam batas aman. Risiko terhadap gangguan pendengaran rendah.")
     else:
         st.error(f"{noise_level} dB ❌ TIDAK MEMENUHI standar SNI lingkungan kerja (> {SNI_LIMIT} dB).")
+        st.warning("**Dampak Potensial:** Dapat menyebabkan gangguan pendengaran, stres, kelelahan, dan menurunkan produktivitas kerja bila terpapar dalam waktu lama.")
 
 elif menu == "Kalkulator Kebisingan Sekolah":
     st.subheader("Kalkulator Kebisingan Lingkungan Sekolah")
 
-    noise_level = st.number_input("Masukkan Tingkat Kebisingan di Sekolah (dalam dB)", min_value=0.0, max_value=150.0, value=40.0)
+    noise_level = st.number_input("Masukkan Tingkat Kebisingan (dalam dB)", min_value=0.0, max_value=150.0, value=40.0)
     SNI_LIMIT = 45.0
 
     if noise_level <= SNI_LIMIT:
-        st.success(f"{noise_level} dB ✅ MEMENUHI standar SNI sekolah (≤ {SNI_LIMIT} dB).")
+        st.success(f"{noise_level} dB ✅ MEMENUHI standar SNI lingkungan sekolah (≤ {SNI_LIMIT} dB).")
+        st.info("**Keterangan:** Kebisingan dalam batas wajar untuk proses belajar. Konsentrasi siswa tetap terjaga.")
     else:
-        st.error(f"{noise_level} dB ❌ TIDAK MEMENUHI standar SNI sekolah (> {SNI_LIMIT} dB).")
+        st.error(f"{noise_level} dB ❌ TIDAK MEMENUHI standar SNI lingkungan sekolah (> {SNI_LIMIT} dB).")
+        st.warning("**Dampak Potensial:** Dapat mengganggu konsentrasi, menurunkan performa belajar, dan menambah stres bagi siswa dan guru.")
 
 elif menu == "Kalkulator Kebisingan Rumah":
     st.subheader("Kalkulator Kebisingan Lingkungan Rumah")
 
-    noise_level = st.number_input("Masukkan Tingkat Kebisingan di Rumah (dalam dB)", min_value=0.0, max_value=150.0, value=50.0)
+    noise_level = st.number_input("Masukkan Tingkat Kebisingan (dalam dB)", min_value=0.0, max_value=150.0, value=50.0)
     SNI_LIMIT = 55.0
 
     if noise_level <= SNI_LIMIT:
-        st.success(f"{noise_level} dB ✅ MEMENUHI standar SNI rumah (≤ {SNI_LIMIT} dB).")
+        st.success(f"{noise_level} dB ✅ MEMENUHI standar SNI lingkungan rumah (≤ {SNI_LIMIT} dB).")
+        st.info("**Keterangan:** Suasana rumah dalam batas kebisingan yang nyaman dan aman untuk istirahat.")
     else:
-        st.error(f"{noise_level} dB ❌ TIDAK MEMENUHI standar SNI rumah (> {SNI_LIMIT} dB).")
+        st.error(f"{noise_level} dB ❌ TIDAK MEMENUHI standar SNI lingkungan rumah (> {SNI_LIMIT} dB).")
+        st.warning("**Dampak Potensial:** Dapat menyebabkan gangguan tidur, tekanan darah meningkat, stres psikologis, dan penurunan kualitas hidup.")
 
 elif menu == "Tentang":
     st.subheader("Tentang Aplikasi")
