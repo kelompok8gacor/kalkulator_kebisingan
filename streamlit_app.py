@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Judul aplikasi
-st.title(":green[Aplikasi Kalkulator Kebisingan]")
+st.title(":green[Kalkulator Kebisingan]")
 
 # Sidebar menu
 menu = st.sidebar.selectbox(
@@ -16,7 +16,7 @@ menu = st.sidebar.selectbox(
 )
 
 if menu == "Beranda":
-    st.subheader("Selamat Datang di Aplikasi Kalkulator Kebisingan")
+    st.subheader("Selamat Datang di Kalkulator Kebisingan")
     st.write(
         """
         Aplikasi ini digunakan untuk mengevaluasi apakah tingkat kebisingan memenuhi standar SNI di berbagai lingkungan:
