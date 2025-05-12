@@ -1,7 +1,18 @@
 import streamlit as st
 
 # Judul aplikasi
-st.title(":green[Kalkulator Kebisingan]")
+st.markdown("""
+    <h1 style='text-align: center; color: #5EFF33; animation: fadeIn 2s ease-in;'>🔊 Kalkulator Kebisingan</h1>
+    <style>
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        h1 {
+            animation: fadeIn 2s ease-in;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Sidebar menu
 menu = st.sidebar.selectbox(
@@ -29,7 +40,7 @@ if menu == "Beranda":
 elif menu == "Kalkulator Kebisingan Umum":
     st.subheader("Kalkulator Kebisingan Lingkungan Kerja / Umum")
 
-    noise_level = st.number_input("Masukkan Tingkat Kebisingan (dalam dB)", min_value=0.0, max_value=150.0, value=70.0)
+    noise_level = st.number_input("Masukkan Tingkat Kebisingan (dalam dB)", min_value=0.0, max_value=150.0, value=0.0)
     SNI_LIMIT = 85.0
 
     if noise_level <= SNI_LIMIT:
@@ -42,7 +53,7 @@ elif menu == "Kalkulator Kebisingan Umum":
 elif menu == "Kalkulator Kebisingan Sekolah":
     st.subheader("Kalkulator Kebisingan Lingkungan Sekolah")
 
-    noise_level = st.number_input("Masukkan Tingkat Kebisingan (dalam dB)", min_value=0.0, max_value=150.0, value=40.0)
+    noise_level = st.number_input("Masukkan Tingkat Kebisingan (dalam dB)", min_value=0.0, max_value=150.0, value=0.0)
     SNI_LIMIT = 45.0
 
     if noise_level <= SNI_LIMIT:
@@ -55,7 +66,7 @@ elif menu == "Kalkulator Kebisingan Sekolah":
 elif menu == "Kalkulator Kebisingan Rumah":
     st.subheader("Kalkulator Kebisingan Lingkungan Rumah")
 
-    noise_level = st.number_input("Masukkan Tingkat Kebisingan (dalam dB)", min_value=0.0, max_value=150.0, value=50.0)
+    noise_level = st.number_input("Masukkan Tingkat Kebisingan (dalam dB)", min_value=0.0, max_value=150.0, value=0.0)
     SNI_LIMIT = 55.0
 
     if noise_level <= SNI_LIMIT:
@@ -82,3 +93,4 @@ elif menu == "Tentang":
         _Dikembangkan dengan Python & Streamlit._
         """
     )
+
