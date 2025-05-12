@@ -36,6 +36,8 @@ if menu == "Beranda":
         - **Rumah**: Maks. 55 dB
         """
     )
+    st.image("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTdndHhjOGo3eHpjbGxxMGp1cm0wamU2MG4xbXV6bjdha3JtMXplZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5mYcsVrgxtxt7QUc55/giphy.gif", use_container_width=True)
+
 
 elif menu == "Kalkulator Kebisingan Umum":
     st.subheader("Kalkulator Kebisingan Lingkungan Kerja / Umum")
