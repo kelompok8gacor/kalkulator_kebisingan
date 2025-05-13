@@ -54,7 +54,7 @@ elif menu == "Kalkulator Kebisingan Umum":
     st.subheader("Kalkulator Kebisingan Lingkungan Kerja / Umum")
     SNI_LIMIT = 85.0
 
-    st.write("Masukkan satu atau beberapa nilai kebisingan (dalam dB), pisahkan dengan koma (`,`) jika lebih dari satu:")
+    st.write("Masukkan satu atau beberapa nilai kebisingan (dalam dB), pisahkan dengan koma (`,`) jika lebih dari satu data:")
     input_data = st.text_area("Contoh: 80, 82.5, 79", "")
 
     if input_data:
@@ -78,7 +78,7 @@ elif menu == "Kalkulator Kebisingan Sekolah":
     st.subheader("Kalkulator Kebisingan Lingkungan Sekolah")
     SNI_LIMIT = 45.0
 
-    st.write("Masukkan satu atau beberapa nilai kebisingan (dalam dB), pisahkan dengan koma (`,`) jika lebih dari satu:")
+    st.write("Masukkan satu atau beberapa nilai kebisingan (dalam dB), pisahkan dengan koma (`,`) jika lebih dari satu data:")
     input_data = st.text_area("Contoh: 42, 43.5, 46", "")
 
     if input_data:
@@ -102,7 +102,7 @@ elif menu == "Kalkulator Kebisingan Rumah":
     st.subheader("Kalkulator Kebisingan Lingkungan Rumah")
     SNI_LIMIT = 55.0
 
-    st.write("Masukkan satu atau beberapa nilai kebisingan (dalam dB), pisahkan dengan koma (`,`) jika lebih dari satu:")
+    st.write("Masukkan satu atau beberapa nilai kebisingan (dalam dB), pisahkan dengan koma (`,`) jika lebih dari satu data:")
     input_data = st.text_area("Contoh: 50, 53, 57", "")
 
     if input_data:
